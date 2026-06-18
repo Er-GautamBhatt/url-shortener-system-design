@@ -1,1 +1,31 @@
 
+flowchart TB
+
+    User[Client Browser]
+
+    Cloudflare[Cloudflare CDN]
+
+    LB[Load Balancer]
+
+    Django[Django API]
+
+    Redis[(Redis)]
+
+    Postgres[(PostgreSQL)]
+
+    Celery[Celery Workers]
+
+    Queue[Redis Queue]
+
+    User --> Cloudflare
+    Cloudflare --> LB
+    LB --> Django
+
+    Django --> Redis
+    Django --> Postgres
+
+    Django --> Queue
+
+    Queue --> Celery
+
+    Celery --> Postgres

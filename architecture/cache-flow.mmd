@@ -1,0 +1,13 @@
+flowchart LR
+
+    User --> Django
+
+    Django --> Redis
+
+    Redis -->|Cache Hit| User
+
+    Redis -->|Miss| Postgres
+
+    Postgres --> Redis
+
+    Redis --> User

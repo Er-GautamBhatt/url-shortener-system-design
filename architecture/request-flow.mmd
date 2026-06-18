@@ -1,0 +1,13 @@
+sequenceDiagram
+
+    participant User
+    participant API
+    participant DB
+
+    User->>API: POST /api/shorten
+
+    API->>DB: Create Short URL
+
+    DB-->>API: URL Created
+
+    API-->>User: Short URL Response

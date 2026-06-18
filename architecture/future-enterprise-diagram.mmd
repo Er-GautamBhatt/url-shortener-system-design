@@ -1,0 +1,37 @@
+flowchart TB
+
+    User
+
+    Cloudflare
+
+    LoadBalancer
+
+    APICluster[Django API Cluster]
+
+    Redis
+
+    PostgresPrimary
+
+    PostgresReplica
+
+    Queue
+
+    Workers
+
+    User --> Cloudflare
+
+    Cloudflare --> LoadBalancer
+
+    LoadBalancer --> APICluster
+
+    APICluster --> Redis
+
+    APICluster --> PostgresPrimary
+
+    APICluster --> PostgresReplica
+
+    APICluster --> Queue
+
+    Queue --> Workers
+
+    Workers --> PostgresPrimary

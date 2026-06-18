@@ -1,0 +1,29 @@
+flowchart TB
+
+    Internet
+
+    Cloudflare
+
+    Nginx
+
+    Django
+
+    Redis
+
+    PostgreSQL
+
+    Celery
+
+    Internet --> Cloudflare
+
+    Cloudflare --> Nginx
+
+    Nginx --> Django
+
+    Django --> Redis
+
+    Django --> PostgreSQL
+
+    Django --> Celery
+
+    Celery --> PostgreSQL

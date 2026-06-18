@@ -1,0 +1,17 @@
+flowchart TD
+
+    Request[Short URL Request]
+
+    Cache{Redis Hit?}
+
+    DB[(PostgreSQL)]
+
+    Redirect[302 Redirect]
+
+    Request --> Cache
+
+    Cache -->|Yes| Redirect
+
+    Cache -->|No| DB
+
+    DB --> Redirect

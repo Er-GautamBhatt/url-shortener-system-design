@@ -1,0 +1,19 @@
+flowchart TD
+
+    Request[Redirect Request]
+
+    Redirect[302 Redirect]
+
+    Queue[Analytics Queue]
+
+    Worker[Celery Worker]
+
+    Analytics[(Analytics DB)]
+
+    Request --> Redirect
+
+    Request --> Queue
+
+    Queue --> Worker
+
+    Worker --> Analytics

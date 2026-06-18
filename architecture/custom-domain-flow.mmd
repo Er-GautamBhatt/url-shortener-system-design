@@ -1,0 +1,19 @@
+flowchart TD
+
+    Customer[Customer Domain]
+
+    DNS[DNS CNAME]
+
+    Platform[URL Shortener]
+
+    Lookup[Domain Lookup]
+
+    URL[Short URL]
+
+    Customer --> DNS
+
+    DNS --> Platform
+
+    Platform --> Lookup
+
+    Lookup --> URL

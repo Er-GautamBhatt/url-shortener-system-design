@@ -1,0 +1,43 @@
+erDiagram
+
+    USER ||--o{ SHORT_URL : owns
+
+    ORGANIZATION ||--o{ DOMAIN : owns
+
+    ORGANIZATION ||--o{ SHORT_URL : owns
+
+    DOMAIN ||--o{ SHORT_URL : contains
+
+    SHORT_URL ||--o{ CLICK_EVENT : has
+
+    USER {
+        uuid id
+        string email
+        string password
+    }
+
+    ORGANIZATION {
+        uuid id
+        string name
+    }
+
+    DOMAIN {
+        uuid id
+        string domain_name
+        boolean verified
+    }
+
+    SHORT_URL {
+        uuid id
+        string short_code
+        string original_url
+        integer click_count
+    }
+
+    CLICK_EVENT {
+        uuid id
+        string ip_address
+        string country
+        string browser
+        string device_type
+    }
