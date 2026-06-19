@@ -2,7 +2,7 @@
 
 A scalable URL shortening service built with Django and Django REST Framework.
 
-This project demonstrates how modern URL shortening platforms work, including URL generation, redirects, analytics tracking, custom domains, caching strategies, and system design considerations for handling millions of redirects.
+This project demonstrates how modern URL shortening platforms work, including URL generation, redirects, analytics tracking, custom domains, caching strategies, and system design considerations for handling millions of redirects.  
 
 ---
 
