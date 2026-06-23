@@ -14,7 +14,7 @@ class ShortenAPIView(APIView):
     def post(self, request):
 
         original_url = request.data.get(
-            "url"
+            "url" # url which needs to be shorten
         )
 
         short_url = create_short_url(
