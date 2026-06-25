@@ -32,5 +32,5 @@ def redirect_url(request, code):
     )
 
     return redirect(
-        short_url.original_url
+        short_url.original_url  # return original url
     )
