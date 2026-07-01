@@ -12,3 +12,5 @@ urlpatterns = [
         AnalyticsAPIView.as_view()
     ),
 ]
+
+# More urls 
